@@ -289,7 +289,7 @@ int CControls::SnapInput(int *pData)
 	// we freeze the input if chat or menu is activated
 	if(!(m_InputData[g_Config.m_ClDummy].m_PlayerFlags&PLAYERFLAG_PLAYING))
 	{
-		if(!IsDDNet(GameClient()->Client()->GetServerInfo()))
+		if(!IsDDNet(GameClient()->Client()->GetServerInfo()) && IsFNG(Client()->GetServerInfo()))
 			ResetInput(g_Config.m_ClDummy);
 
 		mem_copy(pData, &m_InputData[g_Config.m_ClDummy], sizeof(m_InputData[0]));

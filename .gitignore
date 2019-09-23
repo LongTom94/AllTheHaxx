@@ -8,6 +8,8 @@ datasrc/*.pyc
 /rsa
 /src/game/generated
 /update/
+/.vs/
+/out/
 
 /confusables*
 /crapnet*

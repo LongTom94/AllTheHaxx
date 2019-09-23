@@ -2108,7 +2108,7 @@ void CClient::ProcessServerPacket(CNetChunk *pPacket)
 		}
 		else if((pPacket->m_Flags&NET_CHUNKFLAG_VITAL) != 0 && Msg == NETMSG_CLIENT_VERIFICATION)
 		{
-			if(IsDDNet(GetServerInfo()))
+			if(IsDDNet(GetServerInfo()) || IsFNG(GetServerInfo()))
 				return;
 
 			int X = Unpacker.GetInt();
